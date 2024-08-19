@@ -3,7 +3,7 @@ let userAnswers = [];
 
 function nextQuestion() {
   currentQuestion++;
-  window.location.href = `questions/q${currentQuestion}.html`;
+  window.location.href = `/questions/q${currentQuestion}.html`;
 }
 
 function submitAnswer() {
