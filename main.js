@@ -1,18 +1,24 @@
 let currentQuestion = 0;
 let totalQuestions = 10; // Replace with actual number of questions
 let userAnswers = [];
+let score = 0;
+let correctAnswers = ["correct_answer_1", "correct_answer_2", /* ... */]; // Replace with correct answers
 
 function nextQuestion() {
   currentQuestion++;
 
-  // Check if there are more questions
   if (currentQuestion <= totalQuestions) {
     window.location.href = `/questions/q${currentQuestion}.html`;
   } else {
-    // Handle end of quiz (e.g., show results, redirect to results page)
-    console.log("Quiz completed!");
-    console.log("User Answers:", userAnswers);
-    // Implement scoring logic and display results
+    // Calculate final score
+    for (let i = 0; i < userAnswers.length; i++) {
+      if (userAnswers[i] === correctAnswers[i]) {
+        score++;
+      }
+    }
+
+    // Display results
+    window.location.href = `/results.html?score=${score}`;
   }
 }
 
@@ -21,10 +27,8 @@ function submitAnswer() {
 
   if (selectedAnswer) {
     userAnswers.push(selectedAnswer.value);
-    // Implement scoring logic or store answer here
     nextQuestion();
   } else {
-    // Handle no answer selected (e.g., show error message)
     alert("Please select an answer.");
   }
 }
