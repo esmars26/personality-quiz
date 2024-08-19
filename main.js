@@ -1,20 +1,20 @@
 const questions = [
-  "Question 1: How do you feel about crowds?",
+  "Question 1: You go for a walk outside on a beautiful day. You think to yourself:",
   "Question 2: What do you prefer: planning or spontaneity?",
   // Add more questions here
 ];
 
 const answers = [
-  ["A: Love them", "B: Tolerate them", "C: Avoid them", "D: Hate them"],
+  ["I wonder", "B: Tolerate them", "C: Avoid them", "D: Hate them"],
   ["A: Planning", "B: Spontaneity", "C: Balance", "D: It depends"],
   // Add more answer sets here
 ];
 
 const scores = {
-  "Personality A": [1, 3, 2, 4],
-  "Personality B": [4, 1, 3, 2],
-  "Personality C": [2, 4, 1, 3],
-  "Personality D": [3, 2, 4, 1],
+  "Dreamer": [1, 3, 2, 4],
+  "Discoverer": [4, 1, 3, 2],
+  "Tinkerer": [2, 4, 1, 3],
+  "Do-er": [3, 2, 4, 1],
 };
 
 function renderQuiz() {
