@@ -8,7 +8,7 @@ function nextQuestion() {
   currentQuestion++;
 
   if (currentQuestion <= totalQuestions) {
-    window.location.href = `/questions/q${currentQuestion}.html`;
+    window.location.href = `q${currentQuestion}.html`;
   } else {
     // Calculate final score
     for (let i = 0; i < userAnswers.length; i++) {
